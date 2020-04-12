@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>escopo-variaveis</title>
+        <script>
+            //3 escopos: global, função e bloco
+
+            var filme = 'Batman Begins'; //variavel escopo global
+
+            //escopo de bloco
+            if (true) {
+                var filme2 = 'Um tira da pesada'; //hoisting: elevação da declaração da variavel para o escopo global
+                document.write(filme);
+            }
+
+            document.write(filme2);
+
+            document.write('<br>');
+            
+            //escopo função
+            function x() {
+                var filme3 = 'De volta para o futuro'; //não sofre hoisting
+                document.write(filme);
+                document.write(filme2);
+                return filme3;
+            }
+
+            x();
+
+            document.write(serie3);
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
